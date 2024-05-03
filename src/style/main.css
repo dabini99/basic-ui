@@ -11,10 +11,11 @@ body {
   width: var(--container-size, 940px);
   margin: 0 auto;
 }
- /* 헤더 */
+ /* *헤더 */
 .header{
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
 }
 /* 비주얼 */
 .visual{
@@ -22,31 +23,60 @@ body {
   height: 10vh;
 }
 
-/* 메인 콘텐츠 */
+/* *메인 콘텐츠 */
 .main{
   background-color: skyblue;
-  height: 60vh;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: 
-  align-items:
+  display: flow-root;
+  min-height: 450px;
+  padding: 20px 16px 36px;
 }
+
 .group{
   border: 1px solid red;
+  float: left;
+}
+
+.group:nth-child(n+2){
+  margin-left: 44px;
+}
+
+.group1{
+  width: 250px;
+  background-color: orange;
+}
+
+.group2{
+  width: 380px;
+  background-color: silver;
+}
+
+.group3{
+  background-color: hotpink;
+  width: 190px;
 }
 
 
-/* 슬로건 */
+/* *슬로건 */
 .slogan{
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 
-/* 푸터 */
+/* *푸터 */
 .footer{
   background-color: orange;
 }
 .footer-inner{
   background-color: yellow;
   height: 10vh;
+}
+
+/* !flex를 지원하는 웹브라우저를 위한 스타일 */
+@supports (display: flex) {
+  .main{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
