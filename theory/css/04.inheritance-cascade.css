@@ -1,0 +1,10 @@
+body{
+  color: #f00;
+  font-size: 30px;
+}
+div{
+  border: 1px solid blue;
+}
+h1{
+  border: inherit;
+}
