@@ -1,0 +1,36 @@
+/* 모든 디바이스 */
+/* 모바일 디바이스 - 모바일 퍼스트 */
+
+body{
+  background-color: yellow;
+  /* 320px 이상 640px 이하 */
+  @media(min-width: 320px) and (max-width: 639px){
+  /* 모바일에만 적용되는 코드 */
+    & {
+      background-color: orange;
+    }
+  }
+}
+
+/* breakpoin 라고 불리움 */
+/* 320px 이상 640px 이하 */
+@media(min-width: 320px) and (max-width: 639px){
+  /* 모바일에만 적용되는 코드 */
+}
+
+/* 640px */
+@media (min-width: 640px) and (max-width: 800px){
+  body{
+    background-color: pink;
+  }
+  /* 테블릿에만 적용되는 코드 */
+}
+
+/* 1024px */
+@media (min-width: 1024px){
+  body{
+    background-color: lime;
+  }
+  /* 데스크탑에만 적용되는 코드 */
+}
+
