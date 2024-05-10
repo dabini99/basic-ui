@@ -1,0 +1,39 @@
+  @import url(/style/reset.css);
+  @import url(/style/theme.css);
+  @import url(/style/base.css);
+
+
+  body{
+    margin: 50px;
+  }
+  .menu{
+    background: orangered linear-gradient(to bottom, orange, orangered, orange);
+    box-shadow: 0 -5px 0 0 #121212;
+    color: #000;
+    display: flow-root;
+    padding-left: 225px;
+    padding-inline-start: 225px;
+
+    >li{
+      float: left;
+      border-left: 2px solid white;
+      /* li에 보더를 준 이유는 경계선을 클릭했을 때 버튼이 눌릴까봐! 클릭할 수 없는 영역으로 만들기 위해서 장식하는 거야~ */
+
+    }
+    button{
+      font-weight: 700;
+      font-size: 1.8rem;
+      padding: 0 24px;
+      height: 60px;
+      block-size: 60px;
+      background: transparent;
+      border: 0;
+      color: #fff;
+      text-shadow: 1px 1px 0 #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
+      /* text-shadow: 1px 1px 0 #000, -1px -1px #000; */
+      
+    }
+    ul{
+      display: none;
+    }
+  }
