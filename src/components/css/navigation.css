@@ -20,20 +20,66 @@
       /* li에 보더를 준 이유는 경계선을 클릭했을 때 버튼이 눌릴까봐! 클릭할 수 없는 영역으로 만들기 위해서 장식하는 거야~ */
 
     }
+
+    /* > li.is--active */
+    .is--active{
+      button{
+        color: yellow;
+
+        &::after{
+          content: "";
+          background: #000;
+          display: block;
+          height: 1px;
+          /* border-top: 5px solid blue; */
+        }
+      }
+
+      ul{
+        display: flex;
+      }
+    }
+
     button{
       font-weight: 700;
       font-size: 1.8rem;
       padding: 0 24px;
       height: 60px;
+      line-height: 60px;
       block-size: 60px;
       background: transparent;
       border: 0;
       color: #fff;
-      text-shadow: 1px 1px 0 #000, 2px 2px #000, 3px 3px #000, 4px 4px #000;
-      /* text-shadow: 1px 1px 0 #000, -1px -1px #000; */
+      /* text-shadow: 1px 1px 0 #000, 2px 2px #000, 3px 3px #000, 4px 4px #000; */
+      text-shadow: 1px 1px 0 #000, -1px -1px #000;
       
     }
+    /* is--active 클래스 대신에 */
+    /* button[aria-expanded="true"]{
+      color: lime;
+    } */
+
     ul{
       display: none;
+      position: absolute;
+
+      li{
+        display: inline-block;
+        white-space: nowrap;
+        margin-right: 4px;
+      }
+
+      a{
+        display: flex;
+        padding: 8px;
+        gap: 8px;
+      }
+
     }
+
+    
+
+    /* button[aria-expanded="false"]{
+      display: block;
+    } */
   }
