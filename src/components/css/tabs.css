@@ -1,0 +1,106 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+/* *탭 컨포넌트 */
+body, h1{
+  margin: 20px;
+}
+.tabs{
+  background-color: yellow;
+  /* 완성후 위드값 제거 */
+  width: 50%;
+  position: relative;
+
+  &:has(){
+
+  }
+}
+/* *탭 컨포넌트 */
+.tab-list{
+  /* 내가 만든거 */
+  /* display: flex; */
+  display: flex;
+  flex-flow: row nowrap;
+}
+.tab{
+  /* 내가 만든거 */
+  /* background-color: #ccc;
+  color: #999;
+  width: 65px;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  line-height: 30px; */
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid gray;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem 0.25rem 0 0;
+  color: gray;
+  background-color: #eee; 
+
+  &.is-selected{
+    /* 내가 만든거 */
+    /* background-color: #fff;
+    border: 1px solid orange;
+    border-bottom: 1px solid white;
+    color: orange;
+    width: 80px; */
+    background-color: white;
+    border-color: orangered orangered white orangered;
+    color: orangered;
+  }
+  
+}
+/* *탭 패널, 탭 패널 아이템 */
+.tab-panel{
+  background: pink;
+  display: none;
+  flex-flow: column nowrap;
+  gap: 0.5rem;
+  padding-top: 1.5rem;
+
+  &.is-selected{
+    display: flex;
+  }
+  
+  .tab-panel-item{
+    /* 내가 한거 */
+    /* display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem; */
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+
+    a{
+      /* display: flex;
+      flex-flow: row nowrap; */
+      gap: 0.5rem;
+      background: lime;
+      /* flex-grow: 1;
+      flex-shrink: 1; */
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    span{
+      /* flex-grow: 0;
+      flex-shrink: 0; */
+      flex: 0 0 auto;
+    }
+
+  }
+}
+.tab-more{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
