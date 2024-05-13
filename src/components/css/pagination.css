@@ -5,20 +5,25 @@
 body{
   margin: 50px;
 }
+
 h1{
-  margin: 50px;
+  margin: 20px;
 }
+
 .pagination{
   --text-color: var(--light-blue);
   --selected-text-color: var(--dark-blue);
+
   display: flex;
   flex-flow: row nowrap;
-  columns: 0.5rem;
+  column-gap: 0.5rem;
 
   button{
     border: 0;
     background: transparent;
     padding: 0;
+    flex: 0 0 2rem;
+  
   }
 
   div{
@@ -26,18 +31,16 @@ h1{
     flex-flow: row nowrap;
     justify-content: space-between;
     flex: 1 1 0;
-
+    
     a{
-      color: var(--text-color);
+      /* color: var(--text-color); */
+      color: red;
       padding: 0.5rem 1rem;
 
       &.is-selected{
-        color: var(--selected-text-color);
+        color: var(--dark-blue);
         font-weight: 700;
       }
     }
-  }
-  .is-selected{
-    color: var(--dark-blue);
   }
 }

@@ -77,14 +77,15 @@ body{
   flex-shrink: 0;
   flex-basis: 0; */
   flex: 1 0 0;
-  box-shadow: 1;
+  box-shadow: 0 0 0 1px #000;
   min-width: 300px;
 
   .pagination{
     width: 80%;
-    min-width: 500px;
+    max-width: 500px;
     margin: 0 auto;
   }
+
 }
 
 .sidebar{
@@ -98,18 +99,22 @@ body{
   height: 50px;
   block-size: 50px;
 }
-/* pagination */
+
+
 .pagination{
   --text-color: var(--light-blue);
   --selected-text-color: var(--dark-blue);
+
   display: flex;
   flex-flow: row nowrap;
-  columns: 0.5rem;
+  column-gap: 0.5rem;
 
   button{
     border: 0;
     background: transparent;
     padding: 0;
+    flex: 0 0 2rem;
+  
   }
 
   div{
@@ -117,18 +122,16 @@ body{
     flex-flow: row nowrap;
     justify-content: space-between;
     flex: 1 1 0;
-
+    
     a{
-      color: var(--text-color);
+      /* color: var(--text-color); */
+      color: red;
       padding: 0.5rem 1rem;
 
       &.is-selected{
-        color: var(--selected-text-color);
+        color: var(--dark-blue);
         font-weight: 700;
       }
     }
-  }
-  .is-selected{
-    color: var(--dark-blue);
   }
 }
