@@ -1,0 +1,21 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body{
+  margin: 0;
+}
+/* 여기까지가 일단 배치! */
+/* .combo-box{
+  border: 1px solid red;
+  padding: 0.5rem;
+  display: inline-grid;
+
+  select{
+    appearance: none;
+    border: 0;
+    background: transparent;
+    width: 100px;
+  }
+} */
+/* 여기서부터 완성본 */
