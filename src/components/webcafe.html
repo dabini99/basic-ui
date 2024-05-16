@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="/theory/css/default.css" />
     <link rel="stylesheet" href="./css/webcafe.css" />
     <link rel="stylesheet" href="./css/webcafe-background.css" />
-    <script type="module" src="./js/pagination.js"></script>
+    <script type="module" src="/theory/js/grid-guide.js"></script>
     <script type="module" src="./js/navigation.js"></script>
   </head>
   <body>
@@ -23,17 +23,18 @@
           <span class="burger-bar burger-bar-bottom"></span>
         </button>
       </div>
-      <div class="navigation pink">내비게이션</div>
-        <nav class="menu" aria-label="메인메뉴">
-          <nav class="menu" aria-label="메인 메뉴">
-            <div class="menu-item"><a href="/" class="menu-link">링크 목록1</a></div>
-            <div class="menu-item"><a href="/" class="menu-link">링크 목록2</a></div>
-            <div class="menu-item"><a href="/" class="menu-link">링크 목록3</a></div>
-            <div class="menu-item"><a href="/" class="menu-link">링크 목록4</a></div>
-          </nav>
+      <div class="navigation pink">
+        <nav class="menu" aria-label="메인 메뉴">
+          <div class="menu-item"><a href="/" class="menu-link">링크 목록1</a></div>
+          <div class="menu-item"><a href="/" class="menu-link">링크 목록2</a></div>
+          <div class="menu-item"><a href="/" class="menu-link">링크 목록3</a></div>
+          <div class="menu-item"><a href="/" class="menu-link">링크 목록4</a></div>
         </nav>
+      </div>
       <div class="main green grid-container">
-        <div class="book skyblue cols-6 sm-cols-4 lg-cols-6"><div class="sprite">추천서적</div></div>
+        <div class="book skyblue cols-6 sm-cols-4 lg-cols-6">
+          <div class="sprite">추천서적</div>
+        </div>
         <div class="news orange cols-6 sm-cols-8 lg-cols-6">
           <div class="sprite">새소식</div>
           <figure class="iframe-container">
@@ -46,7 +47,9 @@
       </div>
       <div class="footer violet">푸터</div>
     </div>
-    
+
+
+
     <!-- Grid System -->
     <div class="grid grid-show">
       <div class="grid-column"></div>
