@@ -2,11 +2,6 @@
 @import url(/style/base.css);
 @import url(/theory/css/grid.css);
 
-/* 임시 레이아웃 */
-body{
-  margin-top: 50px;
-}
-
 /* 웹카페 반응형 레이아웃 */
 .container{
   min-height: 100vh;
@@ -16,7 +11,7 @@ body{
   
   .header, .navigation, .footer{
     height: 100px;
-    block-size: 100px;
+    block-size: 100px; 
     width: 100%;
     inline-size: 100%;
   }
@@ -28,75 +23,71 @@ body{
     gap: 24px;
   }
 }
-.header{
+/* .header{
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
-}
+} */
 /* 햄버거 버튼 */
 .burger-button{
-  margin: 100px;
-  background: red;
+  background: transparent;
   border: 0;
   padding: 0;
-  width: 100px;
-  height: 100px;
+  width: 24px;
+  height: 24px;
   z-index: 10;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  
-  
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100%;
+
   span{
     width: 100%;
     height: 20%;
     background: #fff;
     border-radius: 20px;
     transition: all 200ms;
+    grid-area: 1 / 1 / 2 / 2;
   }
 
   .burger-bar-top{
- 
+    align-self: start;
   }
   .burger-bar-middle{
-    
+    align-self: center;
   }
   .burger-bar-bottom{
-
+    align-self: end;
   }
+  /* is-actvie 클래스가 있을 때 */
+  &.is-active{
+  
+  
+    span{
+  
+    }
+  
+    .burger-bar-top, .burger-bar-bottom{
+      align-self: center;
+    }
+  
+    .burger-bar-top{
+      rotate: 45deg;
+    }
+  
+    .burger-bar-middle{
+      translate: -100% 0;
+    }
+  
+    .burger-bar-bottom{
+      rotate: -45deg;
+    }
+  }
+
+  @media (min-width: 768px){
+    display: none;
 }
-
-/* is-actvie 클래스가 있을 때 */
-.burger-button.is-active{
-  overflow: hidden;
-  justify-content: center;
-
-  span{
-
-  }
-
-  .burger-bar-top, .burger-bar-bottom{
-    
-  }
-
-  .burger-bar-top{
-    translate: 0 100%;
-    rotate: 45deg;
-  }
-
-  .burger-bar-middle{
-    translate: -100% 0;
-  }
-
-  .burger-bar-bottom{
-    translate: 0 -100%;
-    rotate: -45deg;
-  }
 }
-
-
-
-
 
 /* transition - 애니메이션 */
 /* 내비게이션 */
@@ -122,3 +113,4 @@ body{
     background: purple;
   }
 }
+
