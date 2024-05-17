@@ -82,9 +82,15 @@
   }
 }
 
-.sprite-icon{
+.sprite-icon1{
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  background-image: url(./../../images/icons/stack.svg#search);
+}
+.sprite-icon2{
   width: 100px;
   height: 100px;
   background-color: yellow;
-  background-image: url(./../../images/icons/_sprite.svg#search);
+  background-image: url(./../../images/icons/stack.svg#dot_circled);
 }
