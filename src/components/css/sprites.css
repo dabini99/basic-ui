@@ -8,7 +8,7 @@
   /* background-color: yellow;
   background-image: url(/images/sprite_main.png);
   background-repeat: no-repeat; */
-  background: yellow url(/images/sprite_main.png) no-repeat;
+  background: url(/images/sprite_main.png) no-repeat;
   padding-left: 60px;
 }
 .sprite-book{
