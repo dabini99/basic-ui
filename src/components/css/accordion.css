@@ -52,8 +52,9 @@ summary{
   
 
   &::marker{
-
+    content: "";
   }
+  /* 근데 이거 왜 넣는 거임,,? */
 }
 
 .content{
