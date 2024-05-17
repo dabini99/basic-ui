@@ -1,0 +1,16 @@
+figure{
+  margin: 0;
+  float: left;
+  /* float로 하는 이유는 float로 공중에 띄어서 p가 옆에 배치되도록 함 */
+  shape-outside: circle();
+  padding: 1rem;
+  width: 30%;
+
+  img{
+    
+    border-radius: 50%;
+    max-width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: conver;
+  }
+}
