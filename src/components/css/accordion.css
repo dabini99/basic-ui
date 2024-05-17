@@ -1,0 +1,61 @@
+@import url(/style/reset.css);
+@import url(/style/theme.css);
+@import url(/style/base.css);
+
+body{
+  margin: 100px;
+  background-color: #181818;
+  color: white;
+}
+
+/* .accordian{
+}
+details{
+  background-color: #a5a4a4;
+  width: 500px;
+  padding: 10px;
+  color: white;
+
+  summary{    
+    display: flex;
+    justify-content: space-between;
+    
+    svg{
+      rotate: 45deg;
+    }
+  }
+}
+.content{
+
+} */
+
+.accordion{
+  color: white;
+  background-color: #696464;
+}
+
+details svg{
+  transition: all 0.2s;
+}
+details[open] svg{
+  
+  rotate: 45deg;
+}
+
+summary{    
+  padding: 1.5rem;
+  font-size: 1.25rem;
+  border-bottom: 2px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+
+  &::marker{
+
+  }
+}
+
+.content{
+  padding: 1.5rem;
+}
